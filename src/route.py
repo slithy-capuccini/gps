@@ -27,5 +27,7 @@ def get_distance(track: List[Point])->float:
     lista_2=[i.position.latitude for i in track]
     lista_3=lista_2[1:]
 
-def distance(distancia2d):
+def distance(coordinada1, coordinada2):
+    alt_dif=(coordinada1.altitude-coordinada2.altitude)/100
+
     return math.squart(distancia2d**2)
