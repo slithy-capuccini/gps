@@ -24,10 +24,12 @@ def get_sub_route(track:List[Point], iniT:time, finalT:time)->List[Point]:
 
 def get_distance(track: List[Point])->float:
     #implement harvesine_distanc
-    lista_2=[i.position.latitude for i in track]
+    lista_2=[i.position.latitud for i in track]
     lista_3=lista_2[1:]
 
 def distance(coordinada1, coordinada2):
-    alt_dif=(coordinada1.altitude-coordinada2.altitude)/100
+    latitud_dif=(coordinada1.latitud-coordinada2.latitud)
+    longitud_dif=(coordinada1.longitud-coordinada2.longitud)
+    alt_dif=(coordinada1.altitud-coordinada2.altitud) #/100
+    return math.sqrt(latitud_dif**2+longitud_dif**2+alt_dif**2)
 
-    return math.squart(distancia2d**2)
